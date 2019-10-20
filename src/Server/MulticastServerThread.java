@@ -25,11 +25,10 @@ public class MulticastServerThread extends QuoteServerThread {
 				buf = dString.getBytes();
 
 				// send it
-				InetAddress group = InetAddress.getByName("255.255.255.255");
+				InetAddress group = InetAddress.getByName("230.0.0.1");
 				DatagramPacket packet = new DatagramPacket(buf, buf.length, group, 4446);
 				socket.send(packet);
-				System.out.println("Server sent a packet");
-				System.out.println(dString);
+				System.out.println("Server sent a packet: " + dString);
 
 				// sleep for a while
 				try {
