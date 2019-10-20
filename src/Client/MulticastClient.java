@@ -9,7 +9,7 @@ public class MulticastClient {
 	public static void main(String[] args) throws IOException {
 
 		MulticastSocket socket = new MulticastSocket(4446);
-		InetAddress address = InetAddress.getByName("230.0.0.1");
+		InetAddress address = InetAddress.getByName("230.0.0.0");
 		socket.joinGroup(address);
 
 		DatagramPacket packet;
